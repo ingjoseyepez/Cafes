@@ -1,5 +1,5 @@
 Para clonar el repo hay que colocar
-
+Git clone git@github.com:ingjoseyepez/Cafes.git
 
 Sólicitar la versión más actual en el repositorio.
 GIT pull origin nombreDeLaRama
