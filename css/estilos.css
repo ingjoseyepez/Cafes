@@ -27,7 +27,7 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.wrapper {
+.menu {
   width: 80%;
   background-color: #892000e6;
   display: flex;
