@@ -27,27 +27,21 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.menu {
-  width: 80%;
-  background-color: #892000e6;
+header .men{
+  padding: 20px;
+  background-color: #891f00;
   display: flex;
-  justify-content: space-around;
-  position: fixed;
-  z-index: 10;
+  justify-content: center;
 }
-nav ul {
-  display: flex;
-  list-style: none;
+.men .menu a {
+	color: #fff;
+	text-decoration: none;
+  margin: 10px 20px;
+	font-size: 18px;
 }
-nav ul li {  
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-}
-nav ul li a { 
-  padding: 10px;
-  margin: 0 40px;
-  color: #fff;
-  text-decoration: none;
+
+header .menu a:hover {
+	text-decoration: underline;
 }
 
 header .contenedor-texto {
@@ -75,98 +69,130 @@ header .contenedor-texto .texto h2 {
 header .contenedor-texto .texto .nombre {
   margin-bottom: 10px;
   font-size: 50px;
+  font-family: 'Arial Narrow Bold', sans-serif;
   line-height: 50px;
 }
 
 /* ----- ----- MAIN ----- ----- */
-.main .contenedor {
-  overflow: visible;
-}
 
 .main .acerca-de {
-  text-align: center;
-  height: 600px;
+	text-align: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .acerca-de .foto img {
+	border-radius: 30%;
 }
 
 .main .acerca-de .texto {
-  color: #5a5a5a;
-  font-weight: 600;
-  font-size: 1em;
-  line-height: 30px;
-  width: 80%;
-  padding-top: 40px;
-  margin: 40px auto 60px auto;
+	color: #000;
+	font-weight: 600;
+  padding: 0 50px;
+	font-size: 1em;
+	line-height: 30px;
+  text-align: justify;
+	width: 50%;
 }
 
 .main .acerca-de .texto .titulo {
-  font-size: 34px;
-  line-height: 34px;
-  margin-bottom: 40px;
-  font-weight: 300;
-  color: #892000c6;
-  text-align: center;
+	font-size: 34px;
+	line-height: 34px;
+	margin: 0 10px;
+	color: #891f00;
+	text-align: center;
 }
 
-.main .acerca-de .texto .bold {
-  color: #891f00;
-  text-decoration: underline;
-}
 
+/* ----- ----- Producto ----- ----- */
 .main .trabajos {
   background: url("../img/grano.jpg") #49a3d6;
   background-size: cover;
   padding: 70px 0 0 20px;
-}
-
-.main .trabajos .contenedor {
-  overflow: hidden;
-}
-
-.main .trabajos .titulos {
-  font-size: 34px;
-  line-height: 34px;
-  margin-bottom: 40px;
-  font-weight: 300;
-  color: #323068;
-  text-align: center;
-}
-
-.main .trabajos .contenedor-trabajos {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
 }
 
-.main .trabajos .contenedor-trabajos .trabajo {
-  width: 23%;
-  margin-bottom: 40px;
-}
-
-.main .trabajos .contenedor-trabajos .trabajo .thumb {
+.card .face {
+  position: absolute;
   width: 100%;
-  margin-bottom: 10px;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
 }
 
-.main .trabajos .contenedor-trabajos .trabajo .thumb img {
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+  position: absolute;
   width: 100%;
-  vertical-align: top;
-  border-radius: 3px;
+  height: 100%;
+  object-fit: cover;
 }
 
-.main .trabajos .contenedor-trabajos .trabajo .descripcion {
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
   text-align: center;
 }
 
-.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
-  font-weight: 700;
-  color: #f5f5f5;
-  margin-bottom: 10px;
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
 }
 
-.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
-  font-size: 14px;
-  color: #636363;
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+} 
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
 }
 
 /* ----- ----- FOOTER ----- ----- */
