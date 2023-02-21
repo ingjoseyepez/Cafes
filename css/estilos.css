@@ -133,7 +133,7 @@ header .contenedor-texto .texto .nombre {
 .card {
   position: relative;
   width: 300px;
-  height: 350px;
+  height: 300px;
   margin: 20px;
 }
 
@@ -201,6 +201,8 @@ header .contenedor-texto .texto .nombre {
 
 .card .back p {
   letter-spacing: 1px;
+  font-size: 15px;
+  text-align: center;
 } 
 
 .card:hover .front {
@@ -350,7 +352,7 @@ footer .redes-sociales .instagram:hover {
         position: fixed;
         top: 0;
         right: -250px;
-        background: white;
+        background: #892000cc;
         width: 250px;
         height: 100vh;
         padding: 40px;
@@ -365,7 +367,7 @@ footer .redes-sociales .instagram:hover {
 
     header .menu ul li{
         margin-top: 30px;
-        margin-left: 30px;
+        margin-left: -30px;
     }
 
     header  .menu ul li a{
@@ -400,7 +402,7 @@ footer .redes-sociales .instagram:hover {
         justify-content: center;
         width: 50px;
         height: 50px;
-        background: rgba(255, 255, 255, 0.1);
+        background:#fff;
         font-size: 24px;
         border-radius: 50px;
         cursor: pointer;
