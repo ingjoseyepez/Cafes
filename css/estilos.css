@@ -321,7 +321,7 @@ footer .redes-sociales .instagram:hover {
   }
   .main .acerca-de {
     flex-direction: column;
-    min-height: 900px;
+    min-height: 1000px;
   }
   .main .acerca-de .texto {
     width: 80%;
