@@ -123,7 +123,7 @@ header .contenedor-texto .texto .nombre {
 
 /* ----- ----- Producto ----- ----- */
 .main .trabajos {
-  background: url("../img/grano.jpg") #49a3d6;
+  background: url("../img/grano.webp") #49a3d6;
   background-size: cover;
   padding: 70px 0 0 20px;
   display: flex;
